@@ -38,9 +38,7 @@ define("KOLOM_IMPOR_KELUARGA", serialize(array(
   "status_rekam" => "34",
   "alamat_sekarang" => "35")));
 
-  require_once 'vendor/spout/src/Spout/Autoloader/autoload.php';
-  use Box\Spout\Reader\Common\Creator\ReaderEntityFactory;
-
+use Box\Spout\Reader\Common\Creator\ReaderEntityFactory;
 
 class Import_model extends CI_Model {
 

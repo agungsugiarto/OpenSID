@@ -249,7 +249,7 @@
   public function get_kode_isian($surat)
   {
 		// Lokasi instalasi SID mungkin di sub-folder
-    include FCPATH . '/vendor/simple_html_dom.php';
+	include APPPATH . 'third_party/simple_html_dom.php';
     $path_bawaan = FCPATH . "/template-surat/".$surat['url_surat']."/". $surat['url_surat'].".php";
     $path_lokal = FCPATH . LOKASI_SURAT_DESA .$surat['url_surat']."/".$surat['url_surat'].".php";
     if (file_exists($path_lokal))

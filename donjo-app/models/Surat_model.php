@@ -1001,7 +1001,7 @@
     $content = ob_get_clean();
 
     // convert in PDF
-    require_once(FCPATH.'vendor/html2pdf/html2pdf.class.php');
+	require_once(APPPATH . 'third_party/html2pdf/html2pdf.class.php');
     try
     {
       $html2pdf = new HTML2PDF();

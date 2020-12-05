@@ -1,0 +1,17 @@
+{
+  "name": "opendesa/opensid",
+  "type": "project",
+  "description": "OpenSID (https://github.com/OpenSID/OpenSID) adalah Sistem Informasi Desa (SID) yang sengaja dibuat supaya terbuka dan dapat dikembangkan bersama-sama oleh komunitas peduli SID",
+  "homepage": "https://opendesa.id",
+  "license": "GPL-3.0-only",
+  "require": {
+    "php": ">=5.3.7",
+    "box/spout": "^3.1",
+    "pusher/pusher-php-server": "^4.1"
+  },
+  "support": {
+    "forum": "https://www.facebook.com/groups/opensid",
+    "telegram": "http://bit.ly/2DG6Beb",
+    "source": "https://github.com/OpenSID/OpenSID"
+  }
+}
