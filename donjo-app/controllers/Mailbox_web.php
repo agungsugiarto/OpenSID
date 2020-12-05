@@ -79,6 +79,10 @@ class Mailbox_web extends Web_Controller
 		$post['tipe'] = 1;
 		$post['status'] = 2;
 		$this->mailbox_model->insert($post);
+
+		$this->load->library('ci_pusher');
+		$this->ci_pusher->instance()->trigger('my-channel', 'event-komentar', $post);
+
 		redirect('mandiri_web/mandiri/1/3/2');
 	}
 

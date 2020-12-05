@@ -175,12 +175,35 @@
 								</li>
 							<?php endif; ?>
 							<?php if ($this->CI->cek_hak_akses('b', 'mailbox')): ?>
-								<li>
+								<!-- <li>
 									<a href="<?= site_url('mailbox'); ?>">
 										<span><i class="fa fa-envelope-o fa-lg" title="Pesan Masuk"></i>&nbsp;</span>
 										<span class="badge" id="b_inbox" style="display: none;"></span>
 									</a>
-								</li>
+								</li> -->
+								<!-- <li class="dropdown messages-menu">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+										<span><i class="fa fa-envelope-o fa-lg" title="Pesan Masuk"></i>&nbsp;</span>
+										<span class="badge"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li class="header">You have 4 messages</li>
+										<li>
+											<ul class="menu">
+												<li>
+													<a href="#">
+														<div class="pull-left">
+															<img src="https://adminlte.io/themes/AdminLTE/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+														</div>
+														<h4>Support Team</h4>
+														<p>Why not buy a new awesome theme?</p>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="footer"><a href="#">See All Messages</a></li>
+									</ul>
+								</li> -->
 							<?php endif; ?>
 							<li class="dropdown user user-menu">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">

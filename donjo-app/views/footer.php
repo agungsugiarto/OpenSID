@@ -43,6 +43,24 @@
 		<script src="<?= base_url()?>assets/js/numeral.min.js"></script>
 		<!-- Script-->
 		<script src="<?= base_url()?>assets/js/script.js"></script>
+		<!-- Pusher SDK JavaScript -->
+		<script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+
+		<script>
+			// Enable pusher logging - don't include this in production
+			<?php if (ENVIRONMENT === 'development') : ?>
+				Pusher.logToConsole = true;
+			<?php endif ?>
+
+			var pusher = new Pusher('<?= $this->setting->pusher_app_key ?>', {
+				cluster: 'ap1'
+			});
+
+			var channel = pusher.subscribe('my-channel');
+			channel.bind('event-komentar', function(data) {
+				alert(JSON.stringify(data));
+			});
+		</script>
 
 		<!-- NOTIFICATION-->
 		<script type="text/javascript">
@@ -50,12 +68,12 @@
 			$('document').ready(function()
 			{
 
-				setTimeout(function()
-				{
-					refresh_badge($("#b_permohonan_surat"), "<?= site_url('notif/permohonan_surat'); ?>");
-					refresh_badge($("#b_komentar"), "<?= site_url('notif/komentar'); ?>");
-					refresh_badge($("#b_inbox"), "<?= site_url('notif/inbox'); ?>");
-				}, 500);
+				// setTimeout(function()
+				// {
+				// 	refresh_badge($("#b_permohonan_surat"), "<?= site_url('notif/permohonan_surat'); ?>");
+				// 	refresh_badge($("#b_komentar"), "<?= site_url('notif/komentar'); ?>");
+				// 	refresh_badge($("#b_inbox"), "<?= site_url('notif/inbox'); ?>");
+				// }, 500);
 
 				if ($('#success-code').val() == 1)
 				{
